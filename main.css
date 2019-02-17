@@ -30,6 +30,7 @@ body {
 
 }
 .center-span {
+	margin:auto;
 	height: 280px;/*this and width & height of center-dot should be same*/
 	display: inline-block;
 	zoom: 1;
