@@ -1,0 +1,79 @@
+
+/* Navbar */
+.navbar {
+	text-transform: uppercase;
+  font-size: 2em;
+}
+
+body {
+  background-color: rgb(50,50,50);
+  color: white;
+}
+
+/* The dots */
+.minWidth {
+		min-width: 300px;
+			padding-bottom: 30px;
+		/*Prevents overlaping on medium screens*/
+}
+.center-dot {
+	margin: auto;
+	display: block;
+	border-color: #FFDE59;
+  border-radius: 50%;
+  border-style: solid;
+  border-width:5px;
+	width: 280px;
+	height: 280px;
+	text-align: center;
+
+}
+.center-span {
+	height: 280px;/*this and width & height of center-dot should be same*/
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	vertical-align: middle;
+}
+.center-dot p {
+	text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+	vertical-align: middle;
+	color: #fff;
+}
+.center-dot p span {
+		display:block;
+}
+/* Colours for info*/
+.green {
+	color: #53803F;
+}
+.orange {
+	color: #FFBD59;
+}
+.red {
+	color: #FF5757;
+}
+.purple {
+	color: #794A87;
+}
+.yellow {
+	color: #FFDE59;
+}
+/***********************************/
+
+
+.row {
+  margin: 50px;
+}
+/*map*/
+#map { height: 480px;
+width: auto;}
+
+section {
+  background-color: black;
+}
