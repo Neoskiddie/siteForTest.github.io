@@ -18,6 +18,7 @@ body {
 }
 .center-dot {
 	margin: auto;
+	padding:auto;
 	display: block;
 	border-color: #FFDE59;
   border-radius: 50%;
