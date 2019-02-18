@@ -50,6 +50,43 @@ body {
 .center-dot p span {
 		display:block;
 }
+
+
+@media only screen and (max-width: 700px) {
+	.center-dot {
+		width: 200px;
+		height: 200px;
+	}
+	.center-span {
+		height: 200px;/*this and width & height of center-dot should be same*/
+	}
+	.center-dot p {
+		font-size: 1em;
+	}
+}
+@media only screen and (max-width: 300px) {
+	.center-dot {
+		width: 100px;
+		height: 100px;
+	}
+	.center-span {
+		height: 100px;/*this and width & height of center-dot should be same*/
+	}
+	.center-dot p {
+		font-size: 0.5em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Colours for info*/
 .green {
 	color: #53803F;
