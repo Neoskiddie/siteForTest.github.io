@@ -2,28 +2,28 @@
 /* Navbar */
 .navbar {
 	text-transform: uppercase;
-  font-size: 2em;
+	font-size: 2em;
 }
 
 body {
-  background-color: rgb(50,50,50);
-  color: white;
+	background-color: rgb(50,50,50);
+	color: white;
 }
 
 /* The dots */
 .minWidth {
-		min-width: 300px;
-			padding-bottom: 30px;
-		/*Prevents overlaping on medium screens*/
+/* 	min-width: 300px; */
+	padding-bottom: 30px;
+	/*Prevents overlaping on medium screens*/
 }
 .center-dot {
 	margin: auto;
 	padding:auto;
 	display: block;
 	border-color: #FFDE59;
-  border-radius: 50%;
-  border-style: solid;
-  border-width:5px;
+  	border-radius: 50%;
+  	border-style: solid;
+  	border-width:5px;
 	width: 280px;
 	height: 280px;
 	text-align: center;
@@ -39,8 +39,8 @@ body {
 }
 .center-dot p {
 	text-transform: uppercase;
-  font-weight: bold;
-  font-size: 2em;
+  	font-weight: bold;
+  	font-size: 2em;
 	display: inline-block;
 	zoom: 1;
 	*display: inline;
@@ -48,7 +48,7 @@ body {
 	color: #fff;
 }
 .center-dot p span {
-		display:block;
+	display:block;
 }
 
 
@@ -107,12 +107,14 @@ body {
 
 
 .row {
-  margin: 50px;
+	margin: 50px;
 }
 /*map*/
-#map { height: 480px;
-width: auto;}
+#map { 
+	height: 480px;
+	width: auto;
+}
 
 section {
-  background-color: black;
+	background-color: black;
 }
