@@ -12,7 +12,7 @@ body {
 
 /* The dots */
 .minWidth {
-/* 	min-width: 300px; */
+	min-width: 300px;
 	padding-bottom: 30px;
 	border: 1px solid red;
 	/*Prevents overlaping on medium screens*/
