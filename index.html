@@ -12,12 +12,11 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Map -->
+    <!-- Map - change later for better one-->
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
     <!----------------------------->
-    <!--Bootstrap stuff  -->
+    <!--Bootstrap stuff - now bootstrap is used only for navbar-->
     <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -33,6 +32,7 @@
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <!--Navbar is only setion that is using bootstrap  -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
@@ -44,7 +44,7 @@
                         <a class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="//codeply.com">About</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
@@ -53,63 +53,43 @@
             </div>
         </div>
     </nav>
-    <div class="container first">
-      <div class="row">
-        <div class="col-md-4 minWidth">
-          <div class="center-dot">
-            <span class="center-span"></span><p>synch <span>location<span> <span class="green">good</span></p>
-          </div>
-        </div>
-        <div class="col-md-4 minWidth">
-          <div class="center-dot">
-            <span class="center-span"></span><p>cloud coverage <span class="orange">mild</span></p>
-          </div>
-       </div>
-        <div class="col-md-4 minWidth">
-          <div class="center-dot">
-            <span class="center-span"></span><p>temperature <span class="purple">6&#176;C</span></p>
-          </div>
-        </div>
-        <div class="col-md-4 minWidth">
-          <div class="center-dot ">
-            <span class="center-span"></span><p>Meteor <span>chance<span> <span class="orange">20%</span></p>
-          </div>
-        </div>
-        <div class="col-md-4 minWidth">
-          <div class="center-dot">
-            <span class="center-span"></span><p>Possible weather <span class="red">snow</span></p>
-          </div>
-       </div>
-        <div class="col-md-4 minWidth">
-          <div class="center-dot">
-            <span class="center-span"></span><p>Eclipse <span class="yellow">2143D</span></p>
-          </div>
-        </div>
-      </div>
-    </div> <!-- /container -->
-    <!-- /container -->
-    <section style="padding:50px">
-        <div class="row" style="padding:0px;">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-8">
-                <div id='map'></div>
-                <script>
-                    mapboxgl.accessToken = 'pk.eyJ1Ijoidm9sZGlnIiwiYSI6ImNqcnkzY25wZjBvcmM0NG9jdncybmd5cTQifQ.1OIcdR85QpsmyPALkbNRGA';
-                    const map = new mapboxgl.Map({
-                        container: 'map',
-                        style: 'mapbox://styles/voldig/cjry5ef0b1ii91fqmgcx3tm77',
-                        center: [-2.078393, 57.107765],
-                        zoom: 10.8
-                    });
-                </script>
-            </div>
-            <div class="col-md-2">
-            </div>
-        </div>
+    <!--This is the section with circles, they are styled only with css, no js here-->
+    <section class="container">
+      <article class="smallColumn touple">
+        <div class="circle"><p>synch <span>location<span> <span class="green">good</span></p></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>cloud <span>coverage</span> <span class="orange">mild</span></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>temperature <span class="purple">6&#176;C</span></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>Meteor <span>chance<span> <span class="orange">20%</span></p></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>Possible <span>weather</span> <span class="red">snow</span></p></div>
+      </article>
+      <article class="smallColumn touple">
+        <div class="circle"><p>Eclipse <span class="yellow">2143D</span></p></div>
+      </article>
+    </section>
+    <!--This is the map - all the JS here is only to handle the map-->
+    <section class="mapBox">
+      <div id='map'></div>
+      <script>
+          mapboxgl.accessToken = 'pk.eyJ1Ijoidm9sZGlnIiwiYSI6ImNqcnkzY25wZjBvcmM0NG9jdncybmd5cTQifQ.1OIcdR85QpsmyPALkbNRGA';
+          const map = new mapboxgl.Map({
+              container: 'map',
+              style: 'mapbox://styles/voldig/cjry5ef0b1ii91fqmgcx3tm77',
+              center: [-2.078393, 57.107765],
+              zoom: 10.8
+          });
+      </script>
     </section>
     <footer>
-        <p style="text-align:center;">&copy; Footer</p>
+        <!--We can change it later to our names-->
+        <p>&copy; Footer</p>
     </footer>
 </body>
 </html>
