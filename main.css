@@ -20,38 +20,57 @@ section {
 
 /************************************Circles************************************/
 .touple:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  background-color: transparent;
+	/*This are settings below 350px and just general style of circles - one circle in a row*/
+  content: ""; /* all text is inside circle class */
+  display: block; /* we want them to display as a block, so they are not overlaping*/
 
+	/*This three lines makes the circles responsive*/
+  width: 100%; /* On small screens the circle should take whole width*/
+  height: 0; /* explained below */
+  padding-bottom: 100%; /* padding-top and padding-bottom in percentages are based on width of element, with height of 0 it makes padding-bottom responsible for height*/
+
+
+	/*style not related to how circles stack*/
+  background-color: transparent;
   border-color: #FFDE59;
-  border-radius: 50%;
+  border-radius: 50%; /* makes them circes */
   border-style: solid;
-  border-width:5px;
 }
 .circle {
   float: left;
+  display: block;
   width: 100%;
   padding-top: 50%;
 	margin-top: -1.9em;
+
   text-align: center;
+	text-transform: uppercase;
+  font-weight: bold;
+	font-size:2.2vw;
+
+  vertical-align: middle;
+	color:white;
 }
-/*That's default - two rows of three circles. Below 350px the make one column*/
+.circle p span {
+	display:block;
+}
+@media only screen and (max-width: 350px) {
+	.circle {
+		font-size:2em;
+	}
+}
+
+/*That's the code for screens bigger then 350 -  three circles in a row.*/
 @media only screen and (min-width: 350px) {
   .smallColumn {
-    display: inline-block;
+    display: inline-block; /* makes them stack next to each other */
     position: relative;
-    width: 30%;
+    width: 30%; /* this is changing the width on bigger devices, but padding-bottom(height of element) is still relative to this so keeps elements circles */
     margin: 4% 0 0 3%;
-    padding: 0;
-    background-color: transparent;
-    border-top: none;
   }
+	/*This selector selects every first circle in a row - I could use id, but this will work if we want to add more circles*/
   .smallColumn:nth-child(3n+1) {
-    margin-left: 1%;
+    margin-left: 1%; /*this makes three circles to stack in one row - try to comment it out and see what happens */
   }
 }
 /* Colours for info inside circles*/
@@ -70,23 +89,6 @@ section {
 .yellow {
 	color: #FFDE59;
 }
-/***********************************/
-/*Text inside circles*/
-.circle {
-  text-transform: uppercase;
-  font-weight: bold;
-	font-size:2.2vw;
-  display: block;
-  vertical-align: middle;
-	color:white;
-}
-.circle p span {
-	display:block;
-}
-@media only screen and (max-width: 350px) {
-	.circle {
-		font-size:2em;
-	}
-}
+
 
 /**********************************************************************/
